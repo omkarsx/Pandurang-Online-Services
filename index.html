@@ -108,7 +108,7 @@ Get Started
     <div class="hero-visual">
       <div class="hero-graphic">
         <div class="graphic-center">
-          <img src="assets/logo.png" alt="Pandurang Online Services" class="hero-logo-graphic"/>
+          <img src="assets/logo.png" alt="Pandurang Online Services" class="hero-logo-graphic" decoding="async" fetchpriority="high"/>
         </div>
         <div class="floating-card fc-1"><span class="fc-icon">🆔</span><span>Aadhaar</span></div>
         <div class="floating-card fc-2"><span class="fc-icon">🪪</span><span>PAN Card</span></div>
@@ -356,7 +356,7 @@ Get Started
         <div class="about-graphic">
           <div class="about-ring r1"></div>
           <div class="about-ring r2"></div>
-          <img src="assets/logo.png" alt="About Pandurang Online Services" class="about-logo"/>
+          <img src="assets/logo.png" alt="About Pandurang Online Services" class="about-logo" loading="lazy" decoding="async"/>
           <div class="about-badge ab1">📍 Local & Trusted</div>
           <div class="about-badge ab2">✅ Gov. Authorized</div>
         </div>
@@ -541,19 +541,19 @@ Get Started
         </div>
       </div>
       <div class="contact-form-wrap">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" novalidate>
           <h3>Send us a Message</h3>
           <div class="form-group">
-            <input type="text" id="name" placeholder="Your Full Name" required/>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" autocomplete="name" required/>
           </div>
           <div class="form-group">
-            <input type="tel" id="phone" placeholder="Phone Number" required/>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel" required/>
           </div>
           <div class="form-group">
-            <input type="email" id="email" placeholder="Email Address"/>
+            <input type="email" id="email" name="email" placeholder="Email Address" autocomplete="email"/>
           </div>
           <div class="form-group">
-            <select id="service">
+            <select id="service" name="service">
               <option value="" disabled selected>Select Service</option>
               <option>Aadhaar Services</option>
               <option>PAN Card Services</option>
@@ -567,10 +567,10 @@ Get Started
             </select>
           </div>
           <div class="form-group">
-            <textarea id="message" placeholder="Your message or query..." rows="4"></textarea>
+            <textarea id="message" name="message" placeholder="Your message or query..." rows="4"></textarea>
           </div>
           <button type="submit" class="btn btn-primary form-submit">Send Message</button>
-          <div class="form-success" id="formSuccess">✅ Message sent! We'll contact you shortly.</div>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite">✅ Message sent! We'll contact you shortly.</div>
         </form>
       </div>
     </div>
@@ -582,7 +582,7 @@ Get Started
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Pandurang Online Services" class="footer-logo"/>
+        <img src="assets/logo.png" alt="Pandurang Online Services" class="footer-logo" loading="lazy" decoding="async"/>
         <p>Your trusted partner for all digital and government services. Empowering citizens with technology.</p>
         <div class="social-icons">
           <a href="#" aria-label="Facebook" class="social-icon">f</a>

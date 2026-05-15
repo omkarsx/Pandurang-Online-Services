@@ -852,21 +852,135 @@ if (track) {
 }
 
 // ---- CONTACT FORM ----
-const form = document.getElementById('contactForm');
-const successMsg = document.getElementById('formSuccess');
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    setTimeout(() => {
-      successMsg.style.display = 'block';
-      form.reset();
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
-    }, 1200);
+const contactForm = document.getElementById('contactForm');
+const contactStatus = document.getElementById('formSuccess');
+let isContactSubmissionInProgress = false;
+
+function getContactValue(id) {
+  return document.getElementById(id)?.value.trim() || '';
+}
+
+function setContactStatus(type, message) {
+  if (!contactStatus) return;
+  contactStatus.className = `form-success ${type}`;
+  contactStatus.textContent = message;
+}
+
+function clearContactStatus() {
+  if (!contactStatus) return;
+  contactStatus.className = 'form-success';
+  contactStatus.textContent = '';
+}
+
+function setContactSubmitting(isSubmitting) {
+  const btn = contactForm?.querySelector('.form-submit');
+  if (!btn) return;
+  btn.disabled = isSubmitting;
+  btn.classList.toggle('loading', isSubmitting);
+  btn.textContent = isSubmitting ? 'Sending...' : 'Send Message';
+}
+
+function validateContactForm() {
+  const name = getContactValue('name');
+  const phone = getContactValue('phone').replace(/\D/g, '');
+  const email = getContactValue('email');
+
+  if (!name) {
+    setContactStatus('error', 'Please enter your full name.');
+    return false;
+  }
+
+  if (!/^[6-9]\d{9}$/.test(phone)) {
+    setContactStatus('error', 'Please enter a valid 10-digit Indian mobile number.');
+    return false;
+  }
+
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    setContactStatus('error', 'Please enter a valid email address.');
+    return false;
+  }
+
+  return true;
+}
+
+function buildContactPayload() {
+  const selectedService = getContactValue('service');
+
+  return {
+    action: 'createContactRequest',
+    timestamp: new Date().toISOString(),
+    source: 'Contact Form',
+    service: 'Contact Form',
+    subservice: selectedService,
+    name: getContactValue('name'),
+    phone: getContactValue('phone').replace(/\D/g, ''),
+    email: getContactValue('email'),
+    message: getContactValue('message'),
+    fileUrl: '',
+    fileName: '',
+    fileType: '',
+    fileBase64: '',
+    status: 'New',
+    sheetName: SERVICE_SHEET_NAME,
+    folderId: SERVICE_DRIVE_FOLDER_ID,
+    fields: {
+      source: 'Contact Form',
+      selectedService
+    }
+  };
+}
+
+async function submitContactRequest(payload) {
+  console.log('[Contact Form] Sending request to Google Apps Script', payload);
+
+  try {
+    return await postServiceJson(payload, 'application/json');
+  } catch (error) {
+    console.error('[Contact Form] application/json submission failed', error);
+
+    if (!isLikelyCorsOrPreflightError(error)) {
+      throw error;
+    }
+
+    console.warn('[Contact Form] Retrying with text/plain JSON for Google Apps Script CORS compatibility');
+    return postServiceJson(payload, 'text/plain;charset=utf-8');
+  }
+}
+
+if (contactForm) {
+  contactForm.addEventListener('input', clearContactStatus);
+
+  contactForm.addEventListener('submit', async event => {
+    event.preventDefault();
+
+    if (isContactSubmissionInProgress) {
+      console.warn('[Contact Form] Duplicate submit prevented');
+      return;
+    }
+
+    clearContactStatus();
+
+    if (!validateContactForm()) {
+      return;
+    }
+
+    isContactSubmissionInProgress = true;
+    setContactSubmitting(true);
+    setContactStatus('loading', 'Sending your message securely...');
+
+    try {
+      const payload = buildContactPayload();
+      const response = await submitContactRequest(payload);
+      console.log('[Contact Form] Submission completed', response);
+      contactForm.reset();
+      setContactStatus('success', "Message sent! We'll contact you shortly.");
+    } catch (error) {
+      console.error('[Contact Form] Submission failed', error);
+      setContactStatus('error', 'Unable to send your message right now. Please try again.');
+    } finally {
+      isContactSubmissionInProgress = false;
+      setContactSubmitting(false);
+    }
   });
 }
 
