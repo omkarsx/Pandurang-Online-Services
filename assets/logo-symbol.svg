@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Pandurang Online Services Symbol</title>
+  <desc id="desc">Simplified navy and orange digital service symbol with central human figure, signal marker, and network arcs.</desc>
+  <defs>
+    <linearGradient id="navyGrad" x1="62" y1="210" x2="171" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07183e"/>
+      <stop offset="1" stop-color="#0B1F4D"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="113" y1="19" x2="159" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M58 88a82 82 0 0 0-16 92" fill="none" stroke="#0B1F4D" stroke-width="8" stroke-linecap="round"/>
+  <path d="M198 88a82 82 0 0 1 16 92" fill="none" stroke="#F97316" stroke-width="8" stroke-linecap="round"/>
+  <path d="M65 166c18-18 28-46 33-71" fill="none" stroke="#0B1F4D" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+  <path d="M191 166c-18-18-28-46-33-71" fill="none" stroke="#F97316" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+  <circle cx="66" cy="165" r="9" fill="#0B1F4D"/>
+  <circle cx="98" cy="95" r="8" fill="#0B1F4D"/>
+  <circle cx="190" cy="165" r="9" fill="#F97316"/>
+  <circle cx="158" cy="95" r="8" fill="#F97316"/>
+
+  <path d="M128 25c-28 0-51 19-51 43 0 28 34 55 51 82 17-27 51-54 51-82 0-24-23-43-51-43Z" fill="url(#orangeGrad)"/>
+  <circle cx="128" cy="67" r="14" fill="#fff"/>
+  <path d="M91 25c22-16 52-16 74 0" fill="none" stroke="#F97316" stroke-width="10" stroke-linecap="round"/>
+  <path d="M104 42c15-11 33-11 48 0" fill="none" stroke="#F97316" stroke-width="9" stroke-linecap="round"/>
+
+  <path d="M128 99 99 128l19 22v37l-12 35h44l-12-35v-37l19-22-29-29Z" fill="url(#navyGrad)"/>
+  <path d="m99 128-31 30 25 25 25-33" fill="none" stroke="url(#navyGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m157 128 31 30-25 25-25-33" fill="none" stroke="url(#navyGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M128 137v62" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+  <circle cx="128" cy="150" r="8" fill="#fff"/>
+  <circle cx="128" cy="150" r="3" fill="#0B1F4D"/>
+  <circle cx="128" cy="184" r="8" fill="#fff"/>
+  <circle cx="128" cy="184" r="3" fill="#0B1F4D"/>
+  <path d="M90 231h76" fill="none" stroke="#0B1F4D" stroke-width="11" stroke-linecap="round"/>
+</svg>

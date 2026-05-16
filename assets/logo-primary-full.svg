@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">Pandurang Online Services Primary Full Logo</title>
+  <desc id="desc">Refined full Pandurang Online Services brand logo with human digital figure, network arcs, service name, tagline and service categories.</desc>
+  <defs>
+    <linearGradient id="navyGrad" x1="340" y1="370" x2="480" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07183e"/>
+      <stop offset="1" stop-color="#0B1F4D"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="408" y1="36" x2="495" y2="146" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <style>
+      .main{font-family:Poppins,Inter,Arial,sans-serif;font-size:104px;font-weight:800;letter-spacing:0;fill:#0B1F4D;}
+      .sub{font-family:Poppins,Inter,Arial,sans-serif;font-size:36px;font-weight:700;letter-spacing:13px;fill:#F97316;}
+      .sub2{fill:#0B1F4D;}
+      .tag{font-family:Poppins,Inter,Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:8px;fill:#0B1F4D;}
+      .svc{font-family:Poppins,Inter,Arial,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;fill:#0B1F4D;}
+    </style>
+  </defs>
+
+  <g transform="translate(0 18)">
+    <path d="M325 145a155 155 0 0 0-31 178" fill="none" stroke="#0B1F4D" stroke-width="12" stroke-linecap="round"/>
+    <path d="M575 145a155 155 0 0 1 31 178" fill="none" stroke="#F97316" stroke-width="12" stroke-linecap="round"/>
+    <path d="M342 300c36-36 56-92 65-142" fill="none" stroke="#0B1F4D" stroke-width="6" stroke-linecap="round" opacity=".72"/>
+    <path d="M558 300c-36-36-56-92-65-142" fill="none" stroke="#F97316" stroke-width="6" stroke-linecap="round" opacity=".72"/>
+    <circle cx="342" cy="300" r="13" fill="#0B1F4D"/>
+    <circle cx="407" cy="158" r="12" fill="#0B1F4D"/>
+    <circle cx="558" cy="300" r="13" fill="#F97316"/>
+    <circle cx="493" cy="158" r="12" fill="#F97316"/>
+    <path d="M450 32c-41 0-74 28-74 63 0 41 49 80 74 119 25-39 74-78 74-119 0-35-33-63-74-63Z" fill="url(#orangeGrad)"/>
+    <circle cx="450" cy="94" r="20" fill="#fff"/>
+    <path d="M390 36c35-24 85-24 120 0" fill="none" stroke="#F97316" stroke-width="15" stroke-linecap="round"/>
+    <path d="M413 64c22-15 52-15 74 0" fill="none" stroke="#F97316" stroke-width="13" stroke-linecap="round"/>
+    <path d="M450 165 405 210l28 33v82l-18 55h70l-18-55v-82l28-33-45-45Z" fill="url(#navyGrad)"/>
+    <path d="m405 210-54 52 40 41 42-60" fill="none" stroke="url(#navyGrad)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m495 210 54 52-40 41-42-60" fill="none" stroke="url(#navyGrad)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M450 232v109" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".9"/>
+    <circle cx="450" cy="255" r="12" fill="#fff"/>
+    <circle cx="450" cy="316" r="12" fill="#fff"/>
+    <path d="M395 398h110" fill="none" stroke="#0B1F4D" stroke-width="16" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(75 442)">
+    <rect x="0" y="22" width="16" height="16" rx="2" fill="#F97316"/>
+    <rect x="22" y="22" width="16" height="16" rx="2" fill="#F97316"/>
+    <rect x="0" y="44" width="16" height="16" rx="2" fill="#F97316"/>
+    <rect x="22" y="44" width="16" height="16" rx="2" fill="#F97316"/>
+    <text class="main" x="48" y="102">Pandurang</text>
+    <rect x="45" y="145" width="64" height="5" rx="2.5" fill="#F97316"/>
+    <text class="sub" x="136" y="158">ONLINE</text>
+    <text class="sub sub2" x="430" y="158">SERVICES</text>
+    <rect x="724" y="145" width="64" height="5" rx="2.5" fill="#F97316"/>
+    <text class="tag" x="120" y="220">SMART SOLUTIONS • DIGITAL INDIA • TRUST ALWAYS</text>
+  </g>
+
+  <g transform="translate(86 686)">
+    <g>
+      <rect x="0" y="-26" width="48" height="34" rx="7" fill="none" stroke="#0B1F4D" stroke-width="4"/>
+      <circle cx="16" cy="-9" r="6" fill="#F97316"/>
+      <path d="M28-16h12M28-6h12" stroke="#0B1F4D" stroke-width="3" stroke-linecap="round"/>
+      <text class="svc" x="-18" y="42">AADHAAR</text>
+    </g>
+    <g transform="translate(130 0)">
+      <rect x="0" y="-26" width="54" height="34" rx="7" fill="none" stroke="#0B1F4D" stroke-width="4"/>
+      <text x="11" y="-5" font-family="Poppins,Arial,sans-serif" font-size="15" font-weight="800" fill="#F97316">PAN</text>
+      <text class="svc" x="-10" y="42">PAN CARD</text>
+    </g>
+    <g transform="translate(265 0)">
+      <circle cx="24" cy="-9" r="25" fill="none" stroke="#0B1F4D" stroke-width="4"/>
+      <path d="M0-9h48M24-34c12 13 12 37 0 50M24-34c-12 13-12 37 0 50" stroke="#0B1F4D" stroke-width="3" fill="none"/>
+      <path d="m40 2 18 10-13 4-5 13-10-18Z" fill="#F97316"/>
+      <text class="svc" x="-8" y="42">PASSPORT</text>
+    </g>
+    <g transform="translate(410 0)">
+      <path d="M7-34h32l16 16V9H7Z" fill="none" stroke="#0B1F4D" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M39-34v16h16" fill="none" stroke="#F97316" stroke-width="4" stroke-linejoin="round"/>
+      <text class="svc" x="-2" y="42">ONLINE FORMS</text>
+    </g>
+    <g transform="translate(565 0)">
+      <path d="M9-28h42v20H9zM0-8h60v30H0z" fill="none" stroke="#0B1F4D" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M13 4h34" stroke="#F97316" stroke-width="4" stroke-linecap="round"/>
+      <text class="svc" x="-6" y="42">PRINTING</text>
+    </g>
+    <g transform="translate(705 0)">
+      <path d="M9-7a22 22 0 0 1 42-8 17 17 0 1 1 6 33H12A16 16 0 0 1 9-7Z" fill="none" stroke="#0B1F4D" stroke-width="4"/>
+      <path d="M32-4v24M22 10l10 10 10-10" stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="svc" x="-5" y="42">SUPPORT</text>
+    </g>
+  </g>
+</svg>
